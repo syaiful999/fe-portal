@@ -1,0 +1,99 @@
+.text-video-list-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  font-size: medium;
+  font-weight: bolder;
+}
+.video-streaming-sub-root {
+  margin-top: 5%;
+}
+.text-video-list-title-bottom {
+  display: grid;
+  grid-row: auto auto;
+  color: #757575;
+  font-size: smaller;
+}
+.video-card-text-description {
+  font-size: large;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 10px;
+}
+.video-list-colomn {
+  display: grid;
+  grid-template-columns: auto auto;
+  cursor: pointer;
+}
+.video-list-colomn-left {
+  width: 220px;
+  height: 100%;
+}
+.text-video-card-title {
+  font-size: x-large;
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.video-list-container {
+  overflow-y: hidden !important;
+  height: 600px;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 4px;
+  direction: rtl;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.video-list-container:hover {
+  overflow-y: scroll !important;
+}
+.video-list-image{
+    object-fit: cover;
+    height: 100%;
+    width: 95%;
+
+}
+.video-streaming-list-command-right-button {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-self: end;
+}
+.video-streaming-list-command-sub {
+  align-self: center;
+}
+.video-streaming-list-command-button-filter {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 3px #00000029;
+  border: 1px solid white;
+  border-radius: 10px;
+  opacity: 1;
+  color: #3a3b3f;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.video-streaming-list-command-icon-filter {
+  margin-right: 5px;
+}
+.video-streaming-list-command-input {
+  margin-left: 10px;
+  border-radius: 10px;
+  align-self: center;
+}
+.video-streaming-list-command-input span {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dashboard-center-div {
+  vertical-align: middle !important;
+  line-height: 50px !important;
+}
+.video-documentary-container {
+  background-image: url(../../assets/img/bg1.jpg);
+}

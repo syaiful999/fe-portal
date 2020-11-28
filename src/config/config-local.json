@@ -1,0 +1,22 @@
+{
+  "App": {
+    "NAME": "FMS",
+    "VERSION": "cache-control",
+    "DEVELOPMENT": true
+  },
+  "GRAPHQL": {
+    "API_ENDPOINT": "http://localhost:8000",
+    "API_ENDPOINT_EXTERNAL": "http://localhost:8000",
+    "API_ENCRYPTION": "Basic",
+    "API_USERNAME": "ext-FMS",
+    "API_PASSWORD": "P@ssw0rd",
+    "API_SOCKET_ENDPOINT": "wss://dev-edge.indikaenergy.co.id/fms-node-service/subscription",
+    "API_SOCKET_ENCRYPTION": "Basic",
+    "API_SOCKET_USERNAME": "ext-FMS-socket",
+    "API_SOCKET_PASSWORD": "P@sw0rd-s0ck3t",
+    "API_TOKEN_SECRET_KEY": "S3CR3TK3Y"
+  },
+  "SERVICE": {
+    "PYTHON_SERVICE":"http://127.0.0.1:8080"
+  }
+}

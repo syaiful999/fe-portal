@@ -1,0 +1,29 @@
+{
+  "App": {
+    "NAME": "FMS",
+    "VERSION": "cache-control",
+    "DEVELOPMENT": true
+  },
+  "GRAPHQL": {
+    "API_ENDPOINT": "http://localhost:1000",
+    "API_ENDPOINT_EXTERNAL": "http://localhost:1000",
+    "API_ENCRYPTION": "Basic",
+    "API_USERNAME": "ext-FMS",
+    "API_PASSWORD": "P@ssw0rd",
+    "API_SOCKET_ENDPOINT": "ws://localhost:1000/graphql",
+    "API_SOCKET_ENCRYPTION": "Basic",
+    "API_SOCKET_USERNAME": "ext-FMS-socket",
+    "API_SOCKET_PASSWORD": "P@sw0rd-s0ck3t",
+    "API_TOKEN_SECRET_KEY": "S3CR3TK3Y"
+  },
+  "SERVICE": {
+    "PYTHON_SERVICE":"http://localhost:8080",
+    "VIDEO-STREAMING":"https://dev-edge.indikaenergy.co.id:9095/video-streaming",
+    "UPLOAD_SERVICE":"https://dev-edge.indikaenergy.co.id:9095",
+    "VIDEO-STREAMING-THUMBNAIL":"https://dev-edge.indikaenergy.co.id:9095/video-streaming/poster"
+  },
+  "ELEARNING": {
+    "ELEARNING_WEB":"http://localhost:8005",
+    "EMAIL_WEB":"https://10.68.11.42/"
+  }
+}

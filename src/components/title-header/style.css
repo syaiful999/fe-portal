@@ -1,0 +1,16 @@
+.title-header-container {
+    display:grid;
+    grid-template-columns: auto;
+}
+.title-header-item {
+    /* place-self: start center;
+    justify-self: flex-start; */
+}
+.title-header-container svg {
+    vertical-align: sub;
+    color: red;
+}
+.title-header-container img {
+    vertical-align: sub;
+    color: red;
+}
