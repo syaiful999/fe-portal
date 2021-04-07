@@ -1,7 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const workboxPlugin = require('workbox-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BrotliPlugin = require('brotli-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -47,7 +46,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|jpeg|gif|ico)$/,
+        test: /\.(png|jpg|jpeg|gif|ico|mp4)$/,
         use: [
           {
             loader: 'file-loader',
@@ -120,12 +119,6 @@ module.exports = {
       swDest: 'sw.js',
       clientsClaim: true,
       skipWaiting: true
-    }),
-    new BrotliPlugin({
-      filename: '[path].br[query]',
-      test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
-      threshold: 10240,
-      minRatio: 0.8
     })
   ]
 }

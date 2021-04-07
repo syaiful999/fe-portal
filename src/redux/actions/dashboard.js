@@ -28,7 +28,6 @@ const dashboardAction = {
         status_filter: 'Published',
       }
       if (dataItem.inCategory) {
-        console.log('masuk')
         param = { ...param, category: dataItem.category_id }
       }
       let payload = await axios.get(API_URL + '/news?' + new URLSearchParams(param).toString())
@@ -174,7 +173,6 @@ const dashboardAction = {
         category_name: dataItem.new_category,
         is_active: true
       }
-      console.log(dataItem)
       await axios.post(API_URL + '/news-category', requestBody).catch((e) => { return { isError: true, message: e.toString() } })
       dispatch({ type: dashboardTypes.ADD_DETAIL, payload: { dataItem: { ...dataItem, new_category: '' } } })
       return { isError: false }
@@ -189,7 +187,6 @@ const dashboardAction = {
         tag_name: dataItem.new_tag.includes('#') ? dataItem.new_tag : '#' + dataItem.new_tag,
         is_active: true
       }
-      console.log(dataItem)
       await axios.post(API_URL + '/news-tag', requestBody).catch((e) => { return { isError: true, message: e.toString() } })
       dispatch({ type: dashboardTypes.ADD_DETAIL, payload: { dataItem: { ...dataItem, new_tag: '' } } })
       return { isError: false }
@@ -328,7 +325,7 @@ const dashboardAction = {
         dispatch({ type: dashboardTypes.EDIT_DATA, payload: { dataItem: d } })
       }
       else {
-        dispatch({ type: dashboardTypes.EDIT_DATA, payload: { dataItem: defaultDataItem } })
+        dispatch({ type: dashboardTypes.EDIT_DATA, payload: { dataItem: {...defaultDataItem, inView:true} } })
       }
       return { isError: false }
     } catch (e) {

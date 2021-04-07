@@ -8,7 +8,8 @@
   font-weight: bolder;
 }
 .video-streaming-sub-root {
-  margin-top: 5%;
+  padding: 7% 4% 0 5%;
+  height: 100%;
 }
 .text-video-list-title-bottom {
   display: grid;
@@ -33,6 +34,7 @@
 .text-video-card-title {
   font-size: x-large;
   font-weight: bolder;
+  color: #ffffff;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .video-list-container {
@@ -53,11 +55,10 @@
 .video-list-container:hover {
   overflow-y: scroll !important;
 }
-.video-list-image{
-    object-fit: cover;
-    height: 100%;
-    width: 95%;
-
+.video-list-image {
+  object-fit: cover;
+  height: 100%;
+  width: 95%;
 }
 .video-streaming-list-command-right-button {
   display: grid;
@@ -94,6 +95,10 @@
   vertical-align: middle !important;
   line-height: 50px !important;
 }
-.video-documentary-container {
-  background-image: url(../../assets/img/bg1.jpg);
+.videos-streaming-background {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100%;
 }

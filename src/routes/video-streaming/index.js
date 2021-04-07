@@ -8,22 +8,21 @@ import { videoStreamingActions } from '../../redux/actions'
 import Videos from './sub-component/videos-card'
 import moment from 'moment'
 import Spinner from '../../components/spinner'
+import background from '../../assets/img/background2.jpg'
 
 const ComponentSwitcher = ({ dataItem }) => {
   if (dataItem)
     return (
-      <Fragment>
-        <div style={{ marginTop: 100 }} className='video-documentary-container'>
-          <Row className='video-streaming-sub-root'>
-            <Col md='8' style={{ paddingLeft: 0 }}>
-              <Videos />
-            </Col>
-            <Col md='4' style={{ padding: 0 }}>
-              <News />
-            </Col>
-          </Row>
-        </div>
-      </Fragment>
+      <div className='video-streaming-sub-root'>
+        <Row >
+          <Col md='8' >
+            <Videos />
+          </Col>
+          <Col md='3' >
+            <News />
+          </Col>
+        </Row>
+      </div>
     )
 }
 
@@ -32,25 +31,29 @@ const Dashboard = ({
   loading,
   loadingHighlight,
   dataHighlight,
+  dataStates,
+  getData
 }) => {
   const [timer, setTimer] = useState(moment().locale('id').format('h:mm:ss a'))
   useEffect(() => {
     if (loading) {
       setTimer(moment().locale('id').format('h:mm:ss a'))
-      // getData({ dataStates })
+      getData({ dataStates })
       // getDataHighlight({ dataStates })
     }
   }, [loading, loadingHighlight])
 
   return (
     <Fragment>
-      <Spinner loading={loading} />
-      <ComponentSwitcher
-        dataItem={dataItem}
-        timer={timer}
-        loading={loading}
-        dataHighlight={dataHighlight}
-      />
+      <div style={{ backgroundImage: `url(${background})` }} className="videos-streaming-background">
+        <Spinner loading={loading} />
+        <ComponentSwitcher
+          dataItem={dataItem}
+          timer={timer}
+          loading={loading}
+          dataHighlight={dataHighlight}
+        />
+      </div>
     </Fragment>
   )
 }

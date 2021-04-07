@@ -40,7 +40,6 @@ const RegisterPage = ({ login, dataRegister, onChange, createNewAccount }) => {
   const [warning, setWarning] = useState({ show: false, type: 'error', message: '' })
 
   const changeRoute = (path) => {
-    console.log(path)
     history.push('/')
     history.push(path)
   }
@@ -49,7 +48,6 @@ const RegisterPage = ({ login, dataRegister, onChange, createNewAccount }) => {
   }
   const onCloseWarning = () => setWarning({ show: false, type: 'error', message: '' })
   const createAccount = async () => {
-    console.log('masuk')
     setLoading(true)
     const { isErrorCreate } = await createNewAccount({ client, dataRegister })
     if (isErrorCreate) {

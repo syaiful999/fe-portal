@@ -17,7 +17,7 @@ const initialState = {
     skip: 0,
     take: 10
   },
-  loading: false,
+  loading: true,
   dataItem: {
     inEdit: false,
     inView: false,

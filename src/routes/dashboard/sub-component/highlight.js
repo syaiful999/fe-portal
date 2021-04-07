@@ -104,7 +104,6 @@ const Highlight = ({ viewMode, dataGrid, dataHighlight, loadingHighlight }) => {
                         next={next}
                         previous={previous}
                         style={{ zIndex: '2' }}
-                        onClickHandler={e => console.log(e)}
                     >
                         <CarouselIndicators items={items()} style={{ zIndex: '2' }} activeIndex={activeIndex} onClickHandler={goToIndex} />
                         {slides}

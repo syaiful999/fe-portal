@@ -34,7 +34,6 @@ const LoginPage = ({ login }) => {
   const [loading, setLoading] = useState(false)
   const [warning, setWarning] = useState({ show: false, type: 'error', message: '' })
   const changeRoute = (path) => {
-    console.log(path)
     history.push('/')
     history.push(path)
   }
