@@ -20,7 +20,7 @@ const MainRoutes = ({
   //   localStorage.clear()
   //   logout()
   // }
-  if (!isAuth && location.pathname === '/streaming') return <Redirect to='/login' />
+  // if (!isAuth && location.pathname === '/streaming') return <Redirect to='/login' />
   return (
     <Fragment>
       <ExamplesNavbar />

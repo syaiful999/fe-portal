@@ -63,6 +63,13 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   /* -webkit-line-clamp: 1; number of lines to show */
+
+  .text-news-title {
+    font-size: large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
 .landing-page-container {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -77,7 +84,6 @@
   position: absolute;
   right: -130px;
   top: 300px;
-  width: 1030px;
   z-index: 1;
 }
 .landing-page-slick-2 img {
@@ -111,7 +117,7 @@
   display: grid;
   grid-template-columns: auto auto;
   background-color: #c00;
-  font-size: large;
+  font-size: xx-large;
   border-radius: 30px;
   color: #fff;
 }

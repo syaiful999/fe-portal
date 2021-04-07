@@ -6,9 +6,12 @@ import { connect } from 'react-redux'
 import propTypes from 'prop-types'
 import { SERVICE } from '../../../config/config.json'
 import moment from 'moment'
+import vidoesss from '../../../assets/img/videoss.mp4'
+
 
 const Videos = ({ itemPlay }) => {
   const url = SERVICE['VIDEO-STREAMING'] + '?files=' + itemPlay.file_video
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -17,19 +20,19 @@ const Videos = ({ itemPlay }) => {
       <div>
         <Plyr
           type='video'
-          url={itemPlay.file_video ? url : ''}
+          url={itemPlay.file_video?url:vidoesss}
           hideControls={true}
           height='50%'
           width='100%'
         />
       </div>
       <div className='text-video-card-title mt-4'>{itemPlay.title}</div>
-      <div hidden={!itemPlay.created_date}>
+      <div style={{color:'white'}}>
         <small className='mr-3'>Published |</small>
         <small>{moment(itemPlay.created_date).format('dddd, DD MMMM YYYY')}</small>
-        <hr></hr>
+        <hr style={{borderColor:"white"}}></hr>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: itemPlay.description }} />
+      <div style={{ color: 'white' }} dangerouslySetInnerHTML={{ __html: itemPlay.description }} />
     </Fragment>
   )
 }

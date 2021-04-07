@@ -15,7 +15,6 @@ const ActionCell = ({ remove, edit, print, moveToTrash, show = defaultStatusShow
   return class extends GridCell {
     render() {
       const { dataItem } = this.props
-      console.log(dataItem)
       return (
         <td className='k-command-cell'>
           <span

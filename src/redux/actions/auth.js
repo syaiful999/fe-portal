@@ -72,7 +72,6 @@ const authActions = {
         created_by: 1,
         created_date: moment().format(),
       }
-      console.log(variables)
       if (dataRegister.id) variables = { ...variables, id: dataRegister.id, modified_by: 1, modified_date: moment().format() }
 
       const mutation =  Mutations.register.create_portal_register
