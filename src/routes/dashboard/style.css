@@ -63,9 +63,14 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   /* -webkit-line-clamp: 1; number of lines to show */
-
-  .text-news-title {
+  .text-videos-title {
     font-size: large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .text-news-title {
+    font-size: x-large;
     font-weight: bolder;
     color: #ffffff;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -254,4 +259,20 @@
   border-width: 5px;
   border-radius: 20px;
   background-color: rgb(226 0 0);
+}
+.landing-page-news-detail{
+  padding: 7% 4% 0 5%
+}
+.landing-page-news-detail-content{
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+.landing-page-news-detail-content-img{
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+.news-detail-title {
+  margin-bottom: 5px;
+  font-size: xx-large;
 }

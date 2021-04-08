@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import propTypes from 'prop-types'
 import { SERVICE } from '../../../config/config.json'
 import moment from 'moment'
-import vidoesss from '../../../assets/img/videoss.mp4'
+// import vidoesss from '../../../assets/img/videoss.mp4'
 
 
 const Videos = ({ itemPlay }) => {
@@ -20,7 +20,7 @@ const Videos = ({ itemPlay }) => {
       <div>
         <Plyr
           type='video'
-          url={itemPlay.file_video?url:vidoesss}
+          url={url}
           hideControls={true}
           height='50%'
           width='100%'
